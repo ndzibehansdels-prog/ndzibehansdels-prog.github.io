@@ -2,154 +2,118 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BETE-BOOM GABON - V2</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BETE-BOOM GABON V4 - Officiel</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;background:#0f1419;color:#fff}
-header{background:#1a2a3a;padding:12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
-.logo{font-size:20px;font-weight:900;color:#00d4ff}.logo span{color:#ffcc00}
-.h-left{display:flex;align-items:center;gap:10px}
-.menu-btn{font-size:22px;background:none;border:none;color:#fff;cursor:pointer}
-.h-right{display:flex;gap:8px;align-items:center}
-.btn-sm{padding:6px 12px;border-radius:20px;border:none;font-weight:700;cursor:pointer;font-size:12px}
-.btn-login{background:#222e3c;color:#fff;border:1px solid #3a4a5a}
-.btn-reg{background:#ffcc00;color:#000}
-.tabs{display:flex;gap:8px;padding:10px;background:#1a2a3a;overflow-x:auto}
-.tab{padding:8px 16px;background:#2a3a4a;border-radius:20px;white-space:nowrap;cursor:pointer;border:none;color:#fff}
-.tab.active{background:#00d4ff;color:#000}
-.country-bar{display:flex;gap:8px;padding:10px;background:#121c27;overflow-x:auto}
-.cbtn{padding:6px 12px;background:#1e2f40;border-radius:15px;font-size:13px;cursor:pointer;border:1px solid #2a4a5a;color:#fff}
-.cbtn.active{border-color:#00d4ff;background:#00d4ff22}
-main{padding:10px;padding-bottom:110px}
-.match{background:#1a2a3a;border-radius:12px;padding:12px;margin-bottom:10px;border-left:4px solid #00d4ff}
-.match-title{font-weight:700;font-size:15px;display:flex;justify-content:space-between}
-.league{font-size:11px;color:#8aa0b0;margin:4px 0}
-.odds{display:flex;gap:8px;margin-top:8px}
-.odd{flex:1;background:#0f1c27;border:1px solid #2a4a5a;padding:8px;text-align:center;border-radius:8px;cursor:pointer}
-.odd.sel{background:#00d4ff;color:#000;border-color:#00d4ff;font-weight:700}
-.coupon{position:fixed;bottom:0;left:0;right:0;background:#1a2a3a;border-top:2px solid #00d4ff;padding:12px;border-radius:16px 16px 0 0;z-index:15}
-.c-head{display:flex;justify-content:space-between;font-weight:700}
-.c-list{max-height:80px;overflow:auto;font-size:13px;margin:6px 0}
-.btn-pay{width:100%;background:#ffcc00;color:#000;border:none;padding:14px;border-radius:10px;font-weight:900;font-size:16px;cursor:pointer;margin-top:8px}
-.btn-pay:disabled{background:#333;color:#666}
-input{width:100%;padding:12px;border-radius:8px;border:1px solid #2a4a5a;background:#0f1c27;color:#fff;margin-top:8px}
-/* MODALS */
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:100;justify-content:center;align-items:center;padding:20px}
-.modal.open{display:flex}
-.box{background:#1a2a3a;width:100%;max-width:360px;border-radius:16px;padding:20px;border:1px solid #00d4ff}
-.box h2{margin-bottom:12px;text-align:center}
-.box button.close{position:absolute;right:15px;top:10px;background:none;border:none;color:#fff;font-size:22px}
-.side{display:none;position:fixed;top:0;left:0;bottom:0;width:260px;background:#121c27;z-index:90;padding:20px;border-right:2px solid #00d4ff}
-.side.open{display:block}
-.side a{display:block;padding:12px 0;color:#fff;text-decoration:none;border-bottom:1px solid #223}
-.userTag{font-size:12px;color:#00d4ff;font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',Arial}
+body{background:#0b0f14;color:#fff;padding-bottom:130px}
+header{position:sticky;top:0;z-index:50;background:#111821;display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-bottom:2px solid #ffcc00}
+.logo{font-weight:900;font-size:22px;letter-spacing:-1px}.logo b{color:#00d4ff}.logo i{color:#ffcc00;font-style:normal}
+.h-right{display:flex;gap:6px;align-items:center}
+.icon-btn{width:36px;height:36px;background:#1c2a3a;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;color:#fff;font-size:18px}
+.btn{padding:8px 14px;border-radius:20px;border:none;font-weight:800;font-size:13px;cursor:pointer}
+.btn-y{background:#ffcc00;color:#000}.btn-d{background:#1c2a3a;color:#fff;border:1px solid #2a3a4a}
+.promo{margin:10px;background:linear-gradient(90deg,#00d4ff,#ffcc00);color:#000;padding:12px;border-radius:12px;font-weight:900;display:flex;justify-content:space-between;align-items:center}
+.tabs{display:flex;gap:8px;padding:10px 12px;overflow-x:auto;scrollbar-width:none;background:#0e141c}
+.tab{white-space:nowrap;padding:8px 16px;border-radius:20px;background:#1a2533;border:1px solid #253545;color:#aabfd1;font-size:13px;font-weight:700}.tab.active{background:#fff;color:#000;border-color:#fff}
+.sub{display:flex;gap:6px;padding:0 12px 10px;overflow-x:auto;background:#0e141c}
+.chip{padding:6px 12px;background:#162232;border-radius:14px;font-size:12px;border:1px solid #22344a;cursor:pointer}.chip.active{background:#00d4ff22;border-color:#00d4ff;color:#00d4ff}
+main{padding:10px}
+.card{background:#151f2e;border-radius:14px;padding:12px;margin-bottom:10px;border:1px solid #1e2f45;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(#00d4ff,#ffcc00)}
+.top{display:flex;justify-content:space-between;font-size:12px;color:#8aa0b8}
+.teams{font-weight:800;font-size:15px;margin:6px 0;display:flex;justify-content:space-between}
+.live{color:#ff3040;font-size:11px;background:#ff304022;padding:2px 6px;border-radius:6px;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:0.4}}
+.odds{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px}
+.o{background:#0e1723;border:1px solid #22344a;border-radius:10px;padding:9px;text-align:center;cursor:pointer;transition:0.2s}.o b{display:block;font-size:15px;margin-top:2px}.o small{font-size:11px;color:#7a8fa6}.o.sel{background:#ffcc00;color:#000;border-color:#ffcc00;transform:scale(1.05)}.o.sel small{color:#000}
+.coupon{position:fixed;bottom:0;left:0;right:0;background:#111b28;border-top:3px solid #ffcc00;border-radius:18px 18px 0 0;padding:12px;z-index:60;box-shadow:0 -10px 30px #000a}
+.c-head{display:flex;justify-content:space-between;font-weight:800;font-size:14px}
+.c-list{font-size:12px;max-height:90px;overflow:auto;margin:8px 0;color:#c2d4e6}
+.bet-input{display:flex;gap:8px;margin:8px 0}
+.bet-input input{flex:1;background:#0b121c;border:1px solid #22344a;border-radius:10px;padding:12px;color:#fff}
+.quick{display:flex;gap:6px;margin-bottom:8px}
+.quick button{background:#1a2533;border:1px solid #22344a;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px}
+.pay{width:100%;background:linear-gradient(90deg,#ffcc00,#ffd84d);color:#000;border:none;padding:15px;border-radius:12px;font-weight:900;font-size:16px}
+.gain{display:flex;justify-content:space-between;font-size:13px;margin-top:6px}.gain b{color:#ffcc00}
+.modal{position:fixed;inset:0;background:#000c;z-index:100;display:none;align-items:center;justify-content:center;padding:16px}.modal.open{display:flex}
+.box{background:#172333;width:100%;max-width:380px;border-radius:18px;padding:20px;border:1px solid #2a3f5a;position:relative}
+.box h2{text-align:center;margin-bottom:12px}
+.box input{width:100%;background:#0e1723;border:1px solid #22344a;padding:13px;border-radius:10px;color:#fff;margin:6px 0}
+.close{position:absolute;right:12px;top:10px;background:none;border:none;color:#fff;font-size:22px}
+.side{position:fixed;left:0;top:0;bottom:0;width:280px;background:#0e1723;z-index:200;transform:translateX(-100%);transition:0.3s;padding:20px;border-right:2px solid #ffcc00}.side.open{transform:translateX(0)}
+.side a{display:flex;gap:10px;padding:13px 0;border-bottom:1px solid #1e2f45;color:#fff;text-decoration:none;font-weight:600}
+.tag{background:#00d4ff;color:#000;font-size:11px;padding:2px 6px;border-radius:6px;font-weight:800}
 </style>
 </head>
 <body>
-<div class="side" id="sideMenu">
-<h3 style="color:#00d4ff">MENU</h3>
-<a href="#" onclick="openSet()">⚙️ Paramètres</a>
-<a href="#" onclick="openLogin()">👤 Connexion / Inscription</a>
-<a href="#" onclick="openAbout()">ℹ️ À propos BETE-BOOM</a>
+<div class="side" id="side">
+<div style="display:flex;justify-content:space-between;align-items:center"><div class="logo">BETE-<b>BOOM</b> <i>V4</i></div><button class="icon-btn" onclick="closeSide()">×</button></div>
+<div style="margin:16px 0;padding:12px;background:#111c2a;border-radius:12px" id="sideUser">👤 Non connecté</div>
+<a href="#" onclick="openM('login')">🔐 Connexion</a>
+<a href="#" onclick="openM('reg')">📝 Inscription</a>
+<a href="#" onclick="openM('set')">⚙️ Paramètres <span class="tag">NEW</span></a>
+<a href="#" onclick="openM('pay')">💰 Dépôt / Retrait</a>
+<a href="#" onclick="toast('Support WhatsApp: +241 77 00 00 00')">💬 Support WhatsApp</a>
 <a href="#" onclick="closeSide()">❌ Fermer</a>
-<div style="margin-top:20px;font-size:12px;color:#8aa">Version 2.0 - GABON</div>
 </div>
 
 <header>
-<div class="h-left"><button class="menu-btn" onclick="openSide()">☰</button><div class="logo">BETE-<span>BOOM</span></div></div>
-<div class="h-right">
-<div id="userInfo" class="userTag"></div>
-<button class="btn-sm btn-login" id="btnLoginH" onclick="openLogin()">Connexion</button>
-<button class="btn-sm btn-reg" id="btnRegH" onclick="openReg()">Inscription</button>
-</div>
+<div style="display:flex;gap:8px;align-items:center"><button class="icon-btn" onclick="openSide()">☰</button><div class="logo">BETE-<b>BOOM</b> <i>GABON</i></div></div>
+<div class="h-right"><div id="hUser" style="font-size:12px;color:#ffcc00;font-weight:800"></div><button class="btn btn-d" id="hLog" onclick="openM('login')">Connexion</button><button class="btn btn-y" id="hReg" onclick="openM('reg')">Inscription</button></div>
 </header>
 
+<div class="promo"><span>🎁 BONUS 200% 1er dépôt - Code: GABON200</span><span>→</span></div>
 <div class="tabs">
-<button class="tab active" onclick="filterS('all',this)">Tous</button>
-<button class="tab" onclick="filterS('football',this)">⚽ Football</button>
-<button class="tab" onclick="filterS('basket',this)">🏀 Basket</button>
-<button class="tab" onclick="filterS('tennis',this)">🎾 Tennis</button>
+<button class="tab active" onclick="fs('all',this)">🔥 Top</button><button class="tab" onclick="fs('football',this)">⚽ Foot</button><button class="tab" onclick="fs('basket',this)">🏀 Basket</button><button class="tab" onclick="fs('live',this)">🔴 Live</button><button class="tab" onclick="fs('gabon',this)">🇬🇦 GABON</button>
 </div>
-<div class="country-bar">
-<button class="cbtn active" onclick="filterC('all',this)">🌍 Tous</button>
-<button class="cbtn" onclick="filterC('gabon',this)">🇬🇦 GABON</button>
-<button class="cbtn" onclick="filterC('maroc',this)">🇲🇦 Maroc</button>
-<button class="cbtn" onclick="filterC('france',this)">🇫🇷 France</button>
-</div>
-<main id="matches"></main>
+<div class="sub" id="sub"></div>
+<main id="list"></main>
 
 <div class="coupon">
-<div class="c-head"><span>Coupon <b id="cnt">0</b></span><span>Cote: <b id="totalC">1.00</b></span></div>
-<div class="c-list" id="cList">Clique sur une cote pour parier</div>
-<input type="number" id="mise" placeholder="Mise en XAF (ex: 1000)" oninput="calc()">
-<div style="display:flex;justify-content:space-between;margin-top:4px;font-size:13px"><span id="miseA">0 XAF</span><span id="gainA" style="color:#ffcc00;font-weight:700">Gain: 0 XAF</span></div>
-<button class="btn-pay" id="btnPay" disabled onclick="payer()">PARIER - Airtel / Moov Money</button>
+<div class="c-head"><span>🧾 Coupon <b id="cnt">0</b></span><span>Cote: <b id="tot">1.00</b> • Bonus +5%</span></div>
+<div class="c-list" id="clist">Sélectionne une cote pour commencer à gagner</div>
+<div class="quick"><button onclick="setM(1000)">1k</button><button onclick="setM(5000)">5k</button><button onclick="setM(10000)">10k</button><button onclick="setM(25000)">25k</button></div>
+<div class="bet-input"><input id="mise" type="number" placeholder="Mise XAF" oninput="calc()"><button class="btn btn-d" onclick="document.getElementById('mise').value='';calc()">X</button></div>
+<div class="gain"><span id="miseTxt">Mise: 0 XAF</span><b id="gainTxt">Gain potentiel: 0 XAF</b></div>
+<button class="pay" id="payBtn" disabled onclick="bet()">💸 PARIER avec Airtel Money</button>
 </div>
 
-<!-- LOGIN MODAL -->
-<div class="modal" id="loginModal">
-<div class="box" style="position:relative">
-<button class="close" onclick="closeAll()">×</button>
-<h2>Connexion</h2>
-<input id="logName" placeholder="Nom d'utilisateur">
-<input id="logPass" type="password" placeholder="Mot de passe">
-<button class="btn-pay" onclick="doLogin()">Se connecter</button>
-<p style="text-align:center;margin-top:10px;font-size:13px">Pas de compte ? <a href="#" onclick="openReg()" style="color:#00d4ff">S'inscrire</a></p>
-</div>
-</div>
-
-<!-- REG MODAL -->
-<div class="modal" id="regModal">
-<div class="box" style="position:relative">
-<button class="close" onclick="closeAll()">×</button>
-<h2>Inscription</h2>
-<input id="regName" placeholder="Nom complet">
-<input id="regPhone" placeholder="Numéro Airtel / Moov">
-<input id="regPass" type="password" placeholder="Créer mot de passe">
-<button class="btn-pay" onclick="doReg()">Créer mon compte</button>
-</div>
-</div>
-
-<!-- SETTINGS -->
-<div class="modal" id="setModal">
-<div class="box" style="position:relative">
-<button class="close" onclick="closeAll()">×</button>
-<h2>⚙️ Paramètres</h2>
-<p style="font-size:13px;color:#8aa;margin:8px 0">Langue</p><input value="Français - XAF" disabled>
-<p style="font-size:13px;color:#8aa;margin:8px 0">Paiement</p><input value="Airtel Money, Moov Money, Airtel" disabled>
-<p style="font-size:13px;color:#8aa;margin:8px 0">Notifications cotes GABON</p><button class="btn-sm btn-login" style="width:100%" onclick="alert('Notifications activées !')">Activer</button>
-<button class="btn-sm btn-reg" style="width:100%;margin-top:10px" onclick="logout()">Déconnexion</button>
-</div>
-</div>
+<div class="modal" id="m-login"><div class="box"><button class="close" onclick="closeM()">×</button><h2>Connexion</h2><input id="ln" placeholder="Nom / Téléphone"><input id="lp" type="password" placeholder="Mot de passe"><button class="pay" style="margin-top:10px" onclick="doLogin()">Se connecter</button><p style="text-align:center;margin-top:10px;font-size:13px">Pas de compte ? <a style="color:#ffcc00" href="#" onclick="openM('reg')">Créer</a></p></div></div>
+<div class="modal" id="m-reg"><div class="box"><button class="close" onclick="closeM()">×</button><h2>Créer compte GABON</h2><input id="rn" placeholder="Nom complet"><input id="rp" placeholder="Numéro Airtel / Moov Money"><input id="rpass" type="password" placeholder="Mot de passe"><button class="pay" style="margin-top:10px" onclick="doReg()">Créer mon compte + BONUS 200%</button></div></div>
+<div class="modal" id="m-set"><div class="box"><button class="close" onclick="closeM()">×</button><h2>⚙️ Paramètres</h2><label style="font-size:12px;color:#8aa">Langue / Devise</label><input value="Français - XAF - Gabon" disabled><label style="font-size:12px;color:#8aa">Cotes</label><input value="Décimal (1.85) - Format Européen" disabled><label style="font-size:12px;color:#8aa">Notifications</label><button class="btn btn-d" style="width:100%;margin:6px 0" onclick="toast('Notifications activées 🔔')">🔔 Activer notifs GABON</button><button class="btn btn-y" style="width:100%;margin-top:10px" onclick="logout()">Déconnexion</button></div></div>
+<div class="modal" id="m-pay"><div class="box"><button class="close" onclick="closeM()">×</button><h2>💰 Dépôt / Retrait</h2><p style="font-size:13px;margin:8px 0">Airtel Money: 077 00 00 00<br>Moov Money: 062 00 00 00</p><input placeholder="Montant XAF"><button class="pay" onclick="toast('Demande envoyée, tu vas recevoir un SMS')">Demander dépôt</button></div></div>
 
 <script>
-const matchs=[
-{equipes:"Mangasport vs CF Mounana",ligue:"Gabon - National Foot 1",pays:"gabon",sport:"football",cotes:{1:"1.85",X:"3.20",2:"4.10"}},
-{equipes:"Gabon vs Maroc",ligue:"CAN 2025 Qualif",pays:"gabon",sport:"football",cotes:{1:"3.50",X:"3.30",2:"1.95"}},
-{equipes:"AS Pélican vs US Bitam",ligue:"Gabon - National Foot 1",pays:"gabon",sport:"football",cotes:{1:"2.10",X:"3.00",2:"3.40"}},
-{equipes:"PSG vs Marseille",ligue:"France - Ligue 1",pays:"france",sport:"football",cotes:{1:"1.90",X:"3.60",2:"3.80"}},
-{equipes:"Real Madrid vs Barça",ligue:"Espagne - Liga",pays:"france",sport:"football",cotes:{1:"2.30",X:"3.50",2:"2.90"}},
+const data=[
+{teams:"Mangasport vs CF Mounana",league:"🇬🇦 National Foot 1 - GABON",country:"gabon",sport:"football",live:true,cotes:{1:1.92,X:3.15,2:3.95}},
+{teams:"Gabon vs Maroc",league:"CAN 2025 Qualifs",country:"gabon",sport:"football",live:true,cotes:{1:3.60,X:3.40,2:1.85}},
+{teams:"US Bitam vs AS Pélican",league:"🇬🇦 National Foot 1",country:"gabon",sport:"football",live:false,cotes:{1:2.25,X:2.95,2:3.10}},
+{teams:"PSG vs Marseille",league:"France Ligue 1",country:"france",sport:"football",live:false,cotes:{1:1.88,X:3.70,2:3.90}},
+{teams:"Real Madrid vs Barcelona",league:"LaLiga",country:"france",sport:"football",live:true,cotes:{1:2.35,X:3.50,2:2.80}},
+{teams:"NBA: Lakers vs Warriors",league:"Basket USA",country:"all",sport:"basket",live:false,cotes:{1:1.75,2:2.05}},
+{teams:"Djokovic vs Alcaraz",league:"ATP Final",country:"all",sport:"tennis",live:false,cotes:{1:2.10,2:1.72}},
 ];
-let fS="all",fC="all",coupon=[];
-function render(){const cont=document.getElementById('matches');cont.innerHTML="";matchs.filter(m=>(fS==="all"||m.sport===fS)&&(fC==="all"||m.pays===fC)).forEach((m)=>{let o="";for(let k in m.cotes){o+=`<div class="odd" onclick="add('${m.equipes}','${k}','${m.cotes[k]}',this)"><div>${k}</div><b>${m.cotes[k]}</b></div>`}cont.innerHTML+=`<div class="match"><div class="match-title"><span>${m.equipes}</span><span style="font-size:11px">Live</span></div><div class="league">${m.ligue}</div><div class="odds">${o}</div></div>`});}
-function filterS(s,el){fS=s;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');render()}
-function filterC(c,el){fC=c;document.querySelectorAll('.cbtn').forEach(t=>t.classList.remove('active'));el.classList.add('active');render()}
-function add(eq,choix,cote,el){el.classList.toggle('sel');const id=eq+"_"+choix;const idx=coupon.findIndex(x=>x.id===id);if(idx>-1)coupon.splice(idx,1);else{coupon=coupon.filter(x=>!x.id.startsWith(eq+"_"));coupon.push({id,eq,choix,cote:parseFloat(cote)})}update()}
-function update(){document.getElementById('cnt').innerText=coupon.length;let tot=1;let html="";coupon.forEach(c=>{tot*=c.cote;html+=`<div style="display:flex;justify-content:space-between"><span>${c.eq} - ${c.choix}</span><span>${c.cote.toFixed(2)}</span></div>`});if(!coupon.length)html="Clique sur une cote pour parier";document.getElementById('cList').innerHTML=html;document.getElementById('totalC').innerText=tot.toFixed(2);document.getElementById('btnPay').disabled=coupon.length===0;calc()}
-function calc(){const mise=parseFloat(document.getElementById('mise').value)||0;const cote=parseFloat(document.getElementById('totalC').innerText)||1;document.getElementById('miseA').innerText=mise+" XAF";document.getElementById('gainA').innerText="Gain: "+Math.round(mise*cote)+" XAF"}
-function openSide(){document.getElementById('sideMenu').classList.add('open')}
-function closeSide(){document.getElementById('sideMenu').classList.remove('open')}
-function openLogin(){closeSide();document.getElementById('loginModal').classList.add('open')}
-function openReg(){closeAll();document.getElementById('regModal').classList.add('open')}
-function openSet(){closeSide();document.getElementById('setModal').classList.add('open')}
-function closeAll(){document.querySelectorAll('.modal').forEach(m=>m.classList.remove('open'))}
-function openAbout(){alert('BETE-BOOM GABON - Paris sportifs 100% Gabonais. Paiement Airtel Money / Moov Money. Contact WhatsApp: +241 00 00 00 00');}
-function doReg(){const n=document.getElementById('regName').value;if(!n)return alert('Mets ton nom');localStorage.setItem('beteboom_user',n);document.getElementById('userInfo').innerText="👤 "+n;document.getElementById('btnLoginH').style.display='none';document.getElementById('btnRegH').style.display='none';closeAll();alert('Compte créé ! Bienvenue '+n)}
-function doLogin(){const n=document.getElementById('logName').value;if(!n)return alert('Mets ton nom');localStorage.setItem('beteboom_user',n);document.getElementById('userInfo').innerText="👤 "+n;document.getElementById('btnLoginH').style.display='none';document.getElementById('btnRegH').style.display='none';closeAll()}
-function logout(){localStorage.removeItem('beteboom_user');location.reload()}
-function payer(){let u=localStorage.getItem('beteboom_user');if(!u){openLogin();return alert('Connecte-toi d\'abord !')}const mise=document.getElementById('mise').value;if(!mise)return alert("Mets ta mise");const txt=`BONJOUR BETE-BOOM%0AClient: ${u}%0A%0AJe parie:%0A${coupon.map(c=>`- ${c.eq} [${c.choix} @${c.cote}]`).join('%0A')}%0A%0ACote: ${document.getElementById('totalC').innerText}%0AMise: ${mise} XAF%0AGain: ${document.getElementById('gainA').innerText}%0A%0APaiement: Airtel/ Moov`;window.open(`https://wa.me/24100000000?text=${txt}`,'_blank')}
-(function(){let u=localStorage.getItem('beteboom_user');if(u){document.getElementById('userInfo').innerText="👤 "+u;document.getElementById('btnLoginH').style.display='none';document.getElementById('btnRegH').style.display='none'}})();
-render();
+let fSport="all",fCountry="all",coupon=[],subList=["Tous","GABON 🇬🇦","Cote >2","Live 🔴"];
+function fs(s,el){fSport=s;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');render()}
+function fc(c){fCountry=c;render()}
+function renderSub(){document.getElementById('sub').innerHTML=subList.map((x,i)=>`<div class="chip ${i==0?'active':''}" onclick="this.classList.toggle('active');filterChip('${x}')">${x}</div>`).join('')}
+function filterChip(v){if(v.includes('GABON'))fCountry='gabon';else if(v.includes('Tous'))fCountry='all';render()}
+function render(){const L=document.getElementById('list');L.innerHTML='';data.filter(m=>(fSport=='all'||m.sport==fSport||(fSport=='gabon'&&m.country=='gabon')||(fSport=='live'&&m.live))&&(fCountry=='all'||m.country==fCountry)).forEach(m=>{let odds='';for(let k in m.cotes){const id=m.teams+'_'+k;const sel=coupon.some(c=>c.id==id);odds+=`<div class="o ${sel?'sel':''}" onclick="toggle('${m.teams}','${k}',${m.cotes[k]},this)"><small>${k}</small><b>${m.cotes[k]}</b></div>`}L.innerHTML+=`<div class="card"><div class="top"><span>${m.league}</span><span>${m.live?'<span class="live">● LIVE 67\\'</span>':'Auj. 16:00'}</span></div><div class="teams"><span>${m.teams}</span></div><div class="odds">${odds}</div></div>`})}
+function toggle(eq,ch,cote,el){const id=eq+'_'+ch;el.classList.toggle('sel');const idx=coupon.findIndex(c=>c.id==id);if(idx>-1)coupon.splice(idx,1);else{coupon=coupon.filter(c=>!c.id.startsWith(eq+'_'));coupon.push({id,eq,ch,cote})}upd()}
+function upd(){document.getElementById('cnt').innerText=coupon.length;let tot=1,html='';coupon.forEach(c=>{tot*=c.cote;html+=`<div style="display:flex;justify-content:space-between"><span>${c.eq} [${c.ch}]</span><span>${c.cote}</span></div>`});if(!coupon.length)html='Sélectionne une cote pour commencer à gagner';document.getElementById('clist').innerHTML=html;document.getElementById('tot').innerText=tot.toFixed(2);document.getElementById('payBtn').disabled=coupon.length==0;calc()}
+function setM(v){document.getElementById('mise').value=v;calc()}
+function calc(){const m=parseFloat(document.getElementById('mise').value)||0;const c=parseFloat(document.getElementById('tot').innerText)||1;document.getElementById('miseTxt').innerText='Mise: '+m.toLocaleString()+' XAF';document.getElementById('gainTxt').innerText='Gain potentiel: '+Math.round(m*c*1.05).toLocaleString()+' XAF (avec bonus)'}
+function openSide(){document.getElementById('side').classList.add('open')}function closeSide(){document.getElementById('side').classList.remove('open')}
+function openM(id){closeM();closeSide();document.getElementById('m-'+id).classList.add('open')}function closeM(){document.querySelectorAll('.modal').forEach(x=>x.classList.remove('open'))}
+function toast(t){alert(t)}
+function doReg(){const n=document.getElementById('rn').value||document.getElementById('rp').value;if(!n)return toast('Remplis ton nom');localStorage.setItem('bb_user',n);loginUI(n);closeM();toast('Bienvenue '+n+' 🎉 Bonus 200% activé!')}
+function doLogin(){const n=document.getElementById('ln').value;if(!n)return toast('Mets ton nom');localStorage.setItem('bb_user',n);loginUI(n);closeM()}
+function loginUI(n){document.getElementById('hUser').innerText='👤 '+n;document.getElementById('sideUser').innerText='👤 '+n+' • Connecté';document.getElementById('hLog').style.display='none';document.getElementById('hReg').style.display='none'}
+function logout(){localStorage.removeItem('bb_user');location.reload()}
+function bet(){let u=localStorage.getItem('bb_user');if(!u){openM('login');return toast('Connecte-toi d\'abord');}const mise=document.getElementById('mise').value;if(!mise)return toast('Mets ta mise');const txt=`BETE-BOOM GABON V4%0AClient: ${u}%0A%0A${coupon.map(c=>`• ${c.eq} ${c.ch} @${c.cote}`).join('%0A')}%0A%0ACote totale: ${document.getElementById('tot').innerText}%0AMise: ${mise} XAF%0AGain: ${document.getElementById('gainTxt').innerText}%0A%0APaiement Airtel/ Moov Money`;window.open(`https://wa.me/24177000000?text=${txt}`,'_blank')}
+(function(){const u=localStorage.getItem('bb_user');if(u)loginUI(u);renderSub();render()})();
 </script>
 </body>
 </html>
